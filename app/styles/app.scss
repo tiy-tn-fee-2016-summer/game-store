@@ -1,1 +1,23 @@
 @import 'bulma';
+
+$gutter: 0.5rem;
+$main: #de1818;
+$secondary: #d5d5d5;
+$inactive: #f2f2f2;
+
+@import 'register-login';
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}

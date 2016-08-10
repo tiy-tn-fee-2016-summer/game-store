@@ -6,6 +6,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('game-store', function() {
+    this.route('register');
+    this.route('login');
+  });
 });
 
 export default Router;
