@@ -1,0 +1,21 @@
+.main-container{
+  &__inner{
+    max-width: 60rem;
+    margin: auto;
+  }
+}
+.button-group{
+  margin-top:1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.submit-btn{
+  background: $main;
+  color:white;
+  &:hover{
+    color:white;
+  }
+}
+.back-btn{
+  background: $secondary
+}
