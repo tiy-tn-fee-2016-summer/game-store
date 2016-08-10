@@ -22,18 +22,15 @@ h1,h2,h3,h4,h5,h6 {
   margin: 0;
 }
 
-.app {
+.world {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+
 }
 
 .nav {
   width: 100%;
   background: $main;
-  min-height: 15vh;
-  position: fixed;
-
   a{
   color: #fff;
   }
