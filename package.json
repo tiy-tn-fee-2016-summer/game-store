@@ -1,7 +1,7 @@
 {
-  "name": "restaurant",
+  "name": "game-store",
   "version": "0.0.0",
-  "description": "Small description for restaurant goes here",
+  "description": "Small description for game-store goes here",
   "private": true,
   "directories": {
     "doc": "doc",

@@ -1,5 +1,5 @@
 {
-  "name": "restaurant",
+  "name": "game-store",
   "version": "0.0.0",
   "dependencies": {
     "acorn": {
