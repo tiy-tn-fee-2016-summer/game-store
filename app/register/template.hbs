@@ -2,9 +2,11 @@
  <div class="hero__inner">
    <div class="content">
      <h2 class="register-title">Register</h2>
+     {{#simple-form onsubmit=(action "register") as |inputs|}}
      {{input class="input__userName" type="text" placeholder="Username" }}
      {{input class="input__email" type="email" placeholder="Email" }}
      {{input class="input__password" type="password" placeholder="Password" }}
+     {{#/simple-form}}
      <div class="btn-container">
          <a class="button is-danger">BACK</a>
          <a class="button is-success">REGISTER</a>
