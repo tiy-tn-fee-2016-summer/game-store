@@ -14,11 +14,22 @@
 
               <ul>
                 {{#each value.games as |game|}}
-                  {{log game}}
-                  <li class="game">{{game.name}}</li>
+                  <li class="game box">
+                    {{game.name}}
+
+                    <button class="button is-primary" {{action 'addToCart' game }}>Add to Cart</button>
+                  </li>
                 {{/each}}
               </ul>
             </div>
+          {{/each}}
+        </div>
+      </div>
+      <div class="column">
+        <div class="box">
+          <h3 class="subtitle">Cart</h3>
+          {{#each cart.items as |cartItem|}}
+            <li>{{cartItem.data.name}} - {{cartItem.quantity}}</li>
           {{/each}}
         </div>
       </div>
