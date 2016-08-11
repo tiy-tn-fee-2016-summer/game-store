@@ -20,19 +20,19 @@ $primary: #ed6c63;
   box-shadow: 0 5px 34px -1px rgba(0,0,0,0.75);
 }
 
-.input__userName {
+.userName {
   width: 100%;
   margin-bottom: 1rem;
   padding: 0.5rem;
 }
 
-.input__email {
+.email {
   width: 100%;
   margin-bottom: 1rem;
   padding: 0.5rem;
 }
 
-.input__password {
+.password {
   width: 100%;
   margin-bottom: 1rem;
   padding: 0.5rem;
@@ -41,6 +41,31 @@ $primary: #ed6c63;
 .btn-container {
   display: flex;
   justify-content: space-between;
+}
+.btn-container__left {
+  display: flex;
+  width: 100%;
+}
+.button-links {
+  padding: 0.3rem;
+  border-radius: 8%;
+  color: #fff;
+
+  &__back {
+    border: 1px solid red;
+    background: red;
+  }
+  &__login {
+    background: teal;
+    border: 1px solid teal;
+    margin-left: 0.5rem;
+    padding: 0.3rem 0.5rem;
+    font-size: 1rem;
+  }
+  &__register {
+    border: 1px solid green;
+    background: green;
+  }
 }
 
 .nav__logo {

@@ -2,20 +2,35 @@
   <div class="hero__inner">
     <div class="content">
       <h2 class="login-title">Login</h2>
-      {{!-- {{#simple-form onsubmit=(action "login") as |inputs|}} --}}
-        {{input class="input__userName" type="text" placeholder="Username" }}
-        {{input class="input__password" type="password" placeholder="Password" }}
-      {{!-- {{/simple-form}} --}}
+      {{#simple-form onsubmit=(action "login") as |user|}}
+        {{input class="userName" type="text" placeholder="Username" value=user.userName}}
+        {{input class="password" type="password" placeholder="Password" value=user.password}}
       <div class="btn-container">
         <div class="btn-container__left">
-          <a class="button is-danger">BACK</a>
-          <a class="button is-primary">LOGIN</a>
+           {{#link-to "index" class="button-links button-links__back" }}
+           <p class="button-links">BACK</p>
+           {{/link-to}}
+           <button class="button-links button-links__login" type="submit">LOGIN</button>
         </div>
-        <a class="button is-success">REGISTER</a>
-      </div>
+         {{#link-to "register" class="button-links button-links__register" }}
+         <p class="button-links">REGISTER</p>
+         {{/link-to}}
+       </div>
+       {{/simple-form}}
 
     </div>
   </div>
 </div>
+{{outlet}}
+<h2 class="title">Login</h2>
+
+{{#simple-form onsubmit=(action "login") as |inputs|}}
+  <label for="email">email</label>
+    {{input placeholder="email" value=inputs.email}}
+  <label for="password">password</label>
+  {{input type="password" placeholder="password" value=inputs.password}}
+
+  <button type="submit">Submit</button>
+{{/simple-form}}
 
 {{outlet}}
