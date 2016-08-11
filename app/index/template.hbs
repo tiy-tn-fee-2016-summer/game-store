@@ -36,3 +36,25 @@
     </div>
   </div>
 </div>
+
+{{#promise-dialog as |resolve reject dialog|}}
+<div class="modal is-active">
+  <div class="modal-background"></div>
+  <div class="modal-container">
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <button class="delete" {{action reject}}></button>
+      </header>
+      <section class="modal-card-body">
+        <div class="content">
+          <p>{{dialog.options.message}}</p>
+        </div>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-primary" {{action resolve}}>Ok</button>
+        <button class="button" {{action reject}}>NO!</button>
+      </footer>
+    </div>
+  </div>
+</div>
+{{/promise-dialog}}
