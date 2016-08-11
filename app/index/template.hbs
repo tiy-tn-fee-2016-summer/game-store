@@ -7,3 +7,73 @@
     </div>
   </div>
 </nav>
+{{!-- {{#give-me modelName="categories" as |allDem|}}
+{{/give-me}} --}}
+<div class="section">
+  <div class="container">
+    {{#each flashMessages.queue as |flash|}}
+      {{#flash-message flash=flash as |component flash|}}
+        {{#if flash.componentName}}
+          {{component flash.componentName content=flash.content}}
+        {{else}}
+          {{bulma-notification notification=flash.message isWarning=true}}
+        {{/if}}
+      {{/flash-message}}
+    {{/each}}
+
+    <div class="columns">
+      <div class="column">
+        <div class="box">
+          <h2 class="title">Available Now!!!</h2>
+
+          {{#each model as |value|}}
+            <div class="box">
+
+              <h3 class="subtitle">{{value.name}}</h3>
+
+              <ul>
+                {{#each value.games as |game|}}
+                  <li class="game box">
+                    {{game.name}}
+
+                    <button class="button is-primary" {{action 'addToCart' game }}>Add to Cart</button>
+                  </li>
+                {{/each}}
+              </ul>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+      <div class="column">
+        <div class="box">
+          <h3 class="subtitle">Cart</h3>
+          {{#each cart.items as |cartItem|}}
+            <li>{{cartItem.data.name}} - {{cartItem.quantity}}</li>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{#promise-dialog as |resolve reject dialog|}}
+<div class="modal is-active">
+  <div class="modal-background"></div>
+  <div class="modal-container">
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <button class="delete" {{action reject}}></button>
+      </header>
+      <section class="modal-card-body">
+        <div class="content">
+          <p>{{dialog.options.message}}</p>
+        </div>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-primary" {{action resolve}}>Ok</button>
+        <button class="button" {{action reject}}>NO!</button>
+      </footer>
+    </div>
+  </div>
+</div>
+{{/promise-dialog}}
