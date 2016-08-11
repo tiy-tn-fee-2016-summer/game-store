@@ -1,10 +1,19 @@
-<nav class="container">
-  <div class="container__inner">
-      {{#link-to 'index' class="nav__logo"}}Twitch{{/link-to}}
-    <div>
-    {{#link-to 'login' class="button is-primary btn"}}Login{{/link-to}}
-    {{#link-to 'register' class="button is-primary btn"}}Register{{/link-to}}
+<nav class="nav__container">
+  <div class="container">
+    <div class="nav__container-inner">
+      {{#link-to 'index' class="nav__logo" }}Twitch{{/link-to}}
+      <div>
+        {{#link-to 'login' class="button is-primary btn" }}Login{{/link-to}}
+        {{#link-to 'register' class="button is-primary btn" }}Register{{/link-to}}
+      </div>
     </div>
   </div>
 </nav>
 {{outlet}}
+<footer class="footer__container">
+  <div class="container">
+    <div class="footer__container-inner">
+      {{#link-to 'admin' class="button is-primary btn" }}Admin Dashboard{{/link-to}}
+    </div>
+  </div>
+</footer>
