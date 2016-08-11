@@ -1,0 +1,27 @@
+{{!-- {{#give-me modelName="categories" as |allDem|}}
+{{/give-me}} --}}
+<div class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <div class="box">
+          <h2 class="title">Available Now!!!</h2>
+
+          {{#each model as |value|}}
+            <div class="box">
+
+              <h3 class="subtitle">{{value.name}}</h3>
+
+              <ul>
+                {{#each value.games as |game|}}
+                  {{log game}}
+                  <li class="game">{{game.name}}</li>
+                {{/each}}
+              </ul>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

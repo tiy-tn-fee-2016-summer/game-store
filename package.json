@@ -19,6 +19,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "babel-eslint": "^6.1.2",
     "broccoli-asset-rev": "^2.4.2",
     "ember-ajax": "^2.0.1",
     "ember-bulma": "0.1.0",
