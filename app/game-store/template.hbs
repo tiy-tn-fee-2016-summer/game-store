@@ -1,0 +1,27 @@
+<div class="world">
+  <nav class="nav">
+    <div class="container">
+      <div class="nav-left">
+        {{#link-to 'game-store' class="nav-item title is-4"}}
+        Game Store Name
+        {{/link-to}}
+      </div>
+      <div class="nav-right nav-menu">
+        {{#link-to 'game-store.register' class="nav-item"}}
+          Sign Up
+        {{/link-to}}
+        {{#link-to 'game-store.login' class="nav-item"}}
+          Log In
+        {{/link-to}}
+        {{#link-to 'game-store' class="nav-item"}}
+          <span class="button">My Cart</span>
+        {{/link-to}}
+      </div>
+    </div>
+  </nav>
+</div>
+<div class="container">
+  <div class="main">
+  {{outlet}}
+</div>
+</div>
